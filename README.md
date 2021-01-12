@@ -1,4 +1,17 @@
-# BlueCubeMod
+# BlueControllerMod
+This is a fork of the original [BlueCubeMod](https://github.com/NathanReeves/BlueCubeMod) Project by [Nathan Reeves](https://github.com/NathanReeves) implementing support for Nintendo controller types for Nintendo Switch.
+Detailed descriptions can be found in the folders in "Firmware".
+
+### Special Thanks
+Thank you to [@NathanReeves]( https://github.com/NathanReeves ) for making this project possible!
+
+## BlueXNESMod
+This project can be used with NES or SNES controller.
+
+## BlueN64Mod
+**ToDo**: *Add Implementation for N64 Controller.*
+
+## BlueCubeMod
 
 ESP32 based GameCube Controller Bluetooth conversion for Nintendo Switch
 
@@ -8,21 +21,11 @@ Mac/PC/PS4 supported (tested using Dolphin Emulator on Mac, for Switch/Raspberry
 v2: 
 Switch support only - no adapter required
 
-## Wiring:
-
-- Connect pins 23 and 18 to GameCube controller's data pin (Red)
-
-- Connect GND to controller's ground pin (Black)
-
-![alt text](Modding%20Resources/GameCube%20Controller%20Pinout%20SideView.jpg?raw=true)
-
-![alt text](Modding%20Resources/GameCube%20Controller%20Pinout%20TopView.png?raw=true)
-
 ## Build instructions(v2):
 
 - Use this esp-idf fork here: https://github.com/NathanReeves/esp-idf
 
-- Set up the esp-idf environment: https://docs.espressif.com/projects/esp-idf/en/latest/get-started/
+- Set up the esp-idf environment: https://docs.espressif.com/projects/esp-idf/en/v3.1.7/get-started/index.html
 
 - Get the BlueCubeModv2 firmware
 
