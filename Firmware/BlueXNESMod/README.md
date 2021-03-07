@@ -1,61 +1,61 @@
 # BlueXNESMod
-This project can be used with NES or SNES controller.
+This project can be used with NES or SNES controller.  
 
-You have to define the applicable controller type at the beginning of the code.
-    #define NES
-or
-    #define SNES
-
-**ToDo**: Test code with SNES controller.
-Afterwards compile and flash the project as normal.
+You have to define the applicable controller type at the beginning of the code.  
+____  
+    #define NES  
+or  
+____  
+    #define SNES  
+Afterwards compile and flash the project as normal.  
 
 ## Wiring:
 
-**ToDo**: Add pictures and detailed wiring instructions.
+**WARNING: If you connect ESP32 to 5V driven controller, you have to add a level converter circuit.**  
 
-**WARNING: If you connect ESP32 to 5V driven controller, you have to add a level converter circuit.**
-
-- Connect 3,3V/5V to NES/SNES controller's (*depends if your controller is 3,3V compatible*)
+- Connect 3,3V/5V to NES/SNES controller's (*depends if your controller is 3,3V compatible*)  
 
 - Connect pin 13 to NES/SNES controller's latch pin
+  
+- Connect pin 14 to NES/SNES controller's clock pin  
 
-- Connect pin 14 to NES/SNES controller's clock pin
+- Connect pin 15 to NES/SNES controller's data pin  
 
-- Connect pin 15 to NES/SNES controller's data pin
-
-- Connect GND to controller's ground pin
+- Connect GND to controller's ground pin  
 
 
 **NES Connector**
+____  
              ____
-            /    |
-           /   o | -> GND
-    VCC<- | o  o | -> Clock
-    NC<-  | o  o | -> Latch
-    NC<-  | o  o | -> Data
+            /    |  
+           /   o | -> GND  
+    VCC<- | o  o | -> Clock  
+    NC<-  | o  o | -> Latch  
+    NC<-  | o  o | -> Data  
           |______|
 
 **SNES Connector**
-      _
-     / \
-     |o| -> GND
-     |o| -> NC
-     |o| -> NC
-     |-|
-     |o| -> Data
-     |o| -> Latch
-     |o| -> Clock
-     |o| -> VCC
-     |_|
+____
+      _  
+     / \  
+     |o| -> GND  
+     |o| -> NC  
+     |o| -> NC  
+     |-|  
+     |o| -> Data  
+     |o| -> Latch  
+     |o| -> Clock  
+     |o| -> VCC  
+     |_|  
 
 
 ## Build instructions(v2):
 
-- Use this esp-idf fork here: https://github.com/NathanReeves/esp-idf
+- Use this esp-idf fork here: https://github.com/NathanReeves/esp-idf  
 
-- Set up the esp-idf environment: https://docs.espressif.com/projects/esp-idf/en/v3.1.7/get-started/index.html
+- Set up the esp-idf environment: https://docs.espressif.com/projects/esp-idf/en/v3.1.7/get-started/index.html  
 
-- Get the BlueCubeModv2 firmware
+- Get the BlueCubeModv2 firmware  
 
 - If you haven’t flashed an ESP32 project before, you need the port name of ESP32 for the config file. If using unix system, to get the port name of a USB device run:
 

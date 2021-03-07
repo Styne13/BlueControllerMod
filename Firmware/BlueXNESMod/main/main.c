@@ -211,21 +211,21 @@ static void xnes_get_buttons()
 
         //Implement read function here
         gpio_set_level(XNES_LATCH, HIGH);
-        vTaskDelay(RMT_TICK_12_US);
+        vTaskDelay(6);
         gpio_set_level(XNES_LATCH, LOW);
 
         latched = true;
 
         //Wait for controller to start sending the button values
-        vTaskDelay(RMT_TICK_8_US);
+        vTaskDelay(6);
         for(int i = 0; i < READ_LOOP_MAX; i++) {
             //read the value, shift it and store it as a bit on fromController:
             fromController |= !gpio_get_level(XNES_DATA) << i;
 
             gpio_set_level(XNES_CLOCK, HIGH);
-            vTaskDelay(RMT_TICK_8_US);
+            vTaskDelay(6);
             gpio_set_level(XNES_CLOCK, LOW);
-            vTaskDelay(RMT_TICK_8_US);
+            vTaskDelay(6);
         }
         latched = false;
         #ifdef DEBUG
